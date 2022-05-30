@@ -1,0 +1,526 @@
+* {
+    box-sizing: border-box;
+}
+
+ul,li,ol {
+    list-style: none;
+}
+
+p, h1,h2,h3,h4,ul,ol,li,dl,dt,dd {
+    margin: 0;
+    padding: 0;
+}
+
+input {
+    outline: none;
+}
+
+div {
+    display: block;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+    display: block;
+}
+
+body, html {
+    margin: 0;
+    width: 100%;
+    height: 100%;
+    font-family: 'Dosis', 'Noto Sans KR';
+    scroll-behavior: smooth; 
+}
+
+
+.top-btn a {
+    position: fixed;
+    right: 5%;
+    bottom: 10%;
+    font-size: 12pt;
+    color: #000;
+    z-index: 99;
+    border-radius: 50%;
+    border: 3px solid #000;
+    padding: 0 10px;
+    text-align: center;
+    height: 50px;
+}
+
+/* menu */
+
+.menu-area {
+    position: fixed;
+    min-width: 274px;
+    height: 100%;
+    background: #fff;
+    border-right: 2px solid #9b6300;
+}
+
+.menu-area .logo-wrap a {
+    font-size: 24pt;
+    margin-top: 120px;
+    margin-left: 30px;
+}
+
+.menu-area #menu-btn-wrap {
+    border-left: 5px solid rgba(255, 225, 0, 0.3);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 18pt;
+    width: 200px;
+}
+
+.menu-area #menu-btn-wrap a {
+    margin: 40px 30px;
+    transition: 0.3s ;
+}
+
+.menu-area #menu-btn-wrap a.on,
+.menu-area #menu-btn-wrap a:hover {
+    padding-left: 70px;
+}
+
+/* main-area */
+
+.main-area {
+    margin-left: 18%;
+    height: 100vh;
+    display: block;
+    background: #ffc663;
+    position: relative;
+}
+
+.main-area .cloud-wrap {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    width: 500px;
+    height: 300px;
+}
+
+.main-area .cloud-wrap .cloud-all {
+    background: #fff;
+    border-radius: 50%;
+    position: absolute;
+}
+
+.main-area .cloud-wrap .cloud-1 {
+    width: 180px;
+    height: 180px;
+    top: 30px;
+    animation: cloudmoving1 4s infinite normal;
+}
+
+@keyframes cloudmoving1 {
+    from {
+        top: 30px;
+    }
+
+    50% {
+        top: 35px;
+    }
+
+    to {
+        top: 30px;
+    
+    }
+}
+
+.main-area .cloud-wrap .cloud-2 {
+    width: 230px;
+    height: 230px;
+    left: 130px;
+    animation: cloudmoving2 5s infinite normal;
+}
+
+@keyframes cloudmoving2 {
+    from {
+        left: 130px;
+    }
+
+    25% {
+        left: 125px;
+    }
+
+    50% {
+        left: 130px;
+    }
+
+    75% {
+        left: 135px;
+    }
+
+    to {
+        left: 130px;
+    }
+}
+
+.main-area .cloud-wrap .cloud-3 {
+    width: 180px;
+    height: 180px;
+    left: 300px;
+    top: 30px;
+    animation: cloudmoving3 5s infinite normal;
+}
+
+@keyframes cloudmoving3 {
+    from {
+        top: 30px;
+        left: 300px;
+    }
+
+    50% {
+        top: 35px;
+        left: 310px;
+    }
+
+    to {
+        top: 30px;
+        left: 300px;
+    }
+}
+
+.main-area .cloud-wrap .cloud-4 {
+    width: 140px;
+    height: 140px;
+    left: 305px;
+    top: 130px;
+    animation: cloudmoving4 3s infinite normal;
+}
+
+@keyframes cloudmoving4 {
+    from {
+        left: 305px;
+        top: 130px;
+    }
+
+    50% {
+        left: 305px;
+        top: 135px;
+    }
+
+    to {
+        left: 305px;
+        top: 130px;
+    }
+}
+
+.main-area .cloud-wrap .cloud-5 {
+    width: 180px;
+    height: 180px;
+    left: 150px;
+    top: 105px;
+    background-position: center;
+    animation: cloudmoving5 7s infinite normal;
+}
+
+@keyframes cloudmoving5 {
+    from {
+        width: 180px;
+        height: 180px;
+    }
+
+    50% {
+        width: 185px;
+        height: 185px;
+    }
+
+    to {
+        width: 180px;
+        height: 180px;
+    }
+}
+
+.main-area .cloud-wrap .cloud-6 {
+    width: 140px;
+    height: 140px;
+    top: 130px;
+    left: 35px;
+    animation: cloudmoving6 4s infinite normal;
+}
+
+@keyframes cloudmoving6 {
+    from {
+        left: 35px;
+        top: 130px;
+    }
+
+    50% {
+        left: 30px;
+        top: 135px;
+    }
+
+    to {
+        left: 35px;
+        top: 130px;
+    }
+}
+
+.main-area .title-wrap {
+    width: 300px;
+    height: 150px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    font-family: 'Dosis', sans-serif;
+}
+
+.main-area .title-wrap p:nth-child(1) {
+    font-size: 60pt;
+    font-weight: 600;
+    text-align: center;
+    margin-left: -10px;
+}
+
+.main-area .title-wrap p:nth-child(2) {
+    font-size: 30pt;
+    text-align: right;
+    font-weight: 300;
+    margin: -17px 25px 0 0;
+}
+
+.main-area .title-wrap p {
+    top: 50%;
+    left: 50%;
+}
+
+.main-area .bg-keyword-wrap p {
+    color: #fff;
+    font-size: 40pt;
+    position: absolute;
+    top: 20%;
+    left: 10%;
+}
+
+.main-area .fa-angles-down {
+    font-size: 30pt;
+    position: absolute;
+    bottom: 40px;
+    left: 50%;
+    transform: translateX(-50%);
+    animation: page-down 2s infinite normal;
+    opacity: 0;
+    color: #fff;
+}
+
+@keyframes page-down {
+    from {
+        opacity: 0;
+    }
+
+    30% {
+        opacity: 1;
+        bottom: 30px;
+    }
+
+    to {
+        opacity: 0;
+        bottom: 20px;
+    }
+}
+
+/* about-area */
+
+.about-area {
+    margin-left: 18%;
+    height: 100vh;
+    display: block;
+    background: #fff;
+    position: relative;
+    border-top: 1px solid #9b6300;
+}
+
+.about-area .profile-wrap {
+    border-radius: 50%;
+    width: 300px;
+    height: 300px;
+    background: #ddd;
+    display: block;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 10%;
+}
+
+.about-area .info-wrap {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 50%;
+}
+
+/* skills-area */
+
+.skills-area {
+    margin-left: 18%;
+    height: 100vh;
+    display: block;
+    background: #ffc663;
+    position: relative;
+    border-top: 1px solid #9b6300;
+}
+
+.skills-area .skills-box-wrap {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);    
+    width: 75%;
+    height: 70%;
+    display: flex;
+}
+
+.skills-area .skills-box-wrap .skills-30 {
+    flex: 30%;
+}
+
+.skills-area .skills-box-wrap .skills-70 {
+    flex: 70%;
+}
+
+.skills-area .license {
+    background: #fff;
+    padding: 30px;
+    border-radius: 30px;
+    width: 95%;
+    height: 100%;
+    text-align: center;
+}
+
+.skills-area .license dt {
+    margin: 17px auto;
+    font-size: 18pt;
+    font-weight: 700;
+    position: relative;
+}
+
+.skills-area .license dt::before,
+.skills-area .license dt::after {
+    content: "";
+    clear: both;
+    width: 65px;
+    height: 1px;
+    position: absolute;
+    display: block;
+    background: #000;
+    top: 17px;
+}
+
+.skills-area .license dd {
+    font-size: 13pt;
+}
+
+.skills-area .license dt::after {
+    right: 0;
+}
+
+
+.skills-area .coding,
+.skills-area .design {
+    background: orange;
+    width: 100%;
+    height: 48%;
+    margin-bottom: 15px;
+}
+
+
+.skills-area .coding,
+.skills-area .design {
+    text-align: center;
+    padding: 20px 20px;
+    background-color: #fff;
+    border-radius: 30px;
+}
+
+.skills-area .coding {
+    display: flex;
+    justify-content: space-between;
+}
+
+.skills-area .coding dl {
+    width: 30%;
+    display: block;
+}
+
+.skills-area .design dl {
+    width: 50%;
+    display: block;
+}
+
+.skills-area .coding dl dt,
+.skills-area .design dl dt {
+    font-size: 16pt;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+
+/* portfolio-area */
+
+.portfolio-area {
+    margin-left: 18%;
+    height: 100vh;
+    display: block;
+    background: #fff;
+    position: relative;
+    border-top: 1px solid #9b6300;
+}   
+
+.portfolio-area .portfolio-title {
+    margin: 50px auto;
+    text-align: center;
+    font-size: 24pt;
+}
+
+.portfolio-area ul {
+    width: 85%;
+    margin: 50px auto;
+    text-align: center;
+    overflow: hidden;
+}
+
+.portfolio-area ul li {
+    width: 23%;
+    height:  200px;
+    background: #ddd;
+    float: left;
+    margin: 40px 1%;
+    border: 1px solid #9b6300;
+    border-radius: 20px;
+    overflow: hidden;
+}
+
+.portfolio-area ul li:nth-child(1) {
+    background: url(baskin.jpg) no-repeat;
+
+    background-size: 80%;
+    background-position: center;}
+
+.portfolio-area ul li:nth-child(2) {
+    background: url(ashley.jpg) no-repeat;
+
+    background-size: 80%;
+    background-position: center;}
+
+.portfolio-area ul li a {
+    background: rgba(255,198,99,0.7);
+    width: 100%;
+    border-radius: 20px;
+    height: 100%;
+    line-height: 200px;
+    margin-top: 20px;
+    opacity: 0;
+    transition: 0.3s;
+}
+
+.portfolio-area ul li:hover a {
+    opacity: 1;
+    margin-top: 0px;
+
+}
+
