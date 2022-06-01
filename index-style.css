@@ -31,13 +31,15 @@ body, html {
     height: 100%;
     font-family: 'Dosis', 'Noto Sans KR';
     scroll-behavior: smooth; 
+    user-select: none;
+
 }
 
 
 .top-btn a {
     position: fixed;
     right: 5%;
-    bottom: 10%;
+    bottom: 7%;
     font-size: 12pt;
     color: #000;
     z-index: 99;
@@ -52,10 +54,10 @@ body, html {
 
 .menu-area {
     position: fixed;
-    min-width: 274px;
+    width: 274px;
     height: 100%;
     background: #fff;
-    border-right: 2px solid #9b6300;
+    /* border-right: 1px solid #9b6300; */
 }
 
 .menu-area .logo-wrap a {
@@ -90,7 +92,7 @@ body, html {
     margin-left: 18%;
     height: 100vh;
     display: block;
-    background: #ffc663;
+    background: linear-gradient(#ffc663 80%,#fff) ;
     position: relative;
 }
 
@@ -113,7 +115,7 @@ body, html {
     width: 180px;
     height: 180px;
     top: 30px;
-    animation: cloudmoving1 4s infinite normal;
+    animation: cloudmoving1 3s infinite normal;
 }
 
 @keyframes cloudmoving1 {
@@ -135,7 +137,7 @@ body, html {
     width: 230px;
     height: 230px;
     left: 130px;
-    animation: cloudmoving2 5s infinite normal;
+    animation: cloudmoving2 4s infinite normal;
 }
 
 @keyframes cloudmoving2 {
@@ -165,7 +167,7 @@ body, html {
     height: 180px;
     left: 300px;
     top: 30px;
-    animation: cloudmoving3 5s infinite normal;
+    animation: cloudmoving3 4s infinite normal;
 }
 
 @keyframes cloudmoving3 {
@@ -200,7 +202,7 @@ body, html {
     }
 
     50% {
-        left: 305px;
+        left: 310px;
         top: 135px;
     }
 
@@ -216,7 +218,7 @@ body, html {
     left: 150px;
     top: 105px;
     background-position: center;
-    animation: cloudmoving5 7s infinite normal;
+    animation: cloudmoving5 6s infinite normal;
 }
 
 @keyframes cloudmoving5 {
@@ -241,7 +243,7 @@ body, html {
     height: 140px;
     top: 130px;
     left: 35px;
-    animation: cloudmoving6 4s infinite normal;
+    animation: cloudmoving6 3s infinite normal;
 }
 
 @keyframes cloudmoving6 {
@@ -301,7 +303,7 @@ body, html {
 .main-area .fa-angles-down {
     font-size: 30pt;
     position: absolute;
-    bottom: 40px;
+    bottom: 110px;
     left: 50%;
     transform: translateX(-50%);
     animation: page-down 2s infinite normal;
@@ -316,12 +318,12 @@ body, html {
 
     30% {
         opacity: 1;
-        bottom: 30px;
+        bottom: 90px;
     }
 
     to {
         opacity: 0;
-        bottom: 20px;
+        bottom:60px;
     }
 }
 
@@ -331,28 +333,68 @@ body, html {
     margin-left: 18%;
     height: 100vh;
     display: block;
-    background: #fff;
+    background: url(ground.png);
+    background-size: 100% 100%;
     position: relative;
-    border-top: 1px solid #9b6300;
 }
 
 .about-area .profile-wrap {
-    border-radius: 50%;
-    width: 300px;
-    height: 300px;
-    background: #ddd;
-    display: block;
+    width: 70%;
+    height: 60%;
     position: absolute;
+    display: flex;
+    justify-content: space-between;
     top: 50%;
-    transform: translateY(-50%);
-    left: 10%;
+    left: 50%;
+    transform: translate(-50%, -50%);
 }
 
-.about-area .info-wrap {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    left: 50%;
+.about-area .about-me,
+.about-area .spec {
+    width: 48%;
+    border-radius: 20px;
+    line-height: 30px;
+}   
+
+.about-area .about-me .information,
+.about-area .about-me .mention {
+    background: rgba(255, 255, 255, 0.7);
+    border-radius: 20px;
+    height: 210px;
+}
+
+.about-area .about-me .information {
+    padding: 60px 40px;
+    margin-top: 30px;
+}
+
+.about-area .about-me .mention {
+    padding: 45px 40px;
+    font-weight: 700;
+}
+
+.about-area .spec {
+    background: rgba(255, 255, 255, 0.7);
+    padding: 50px;
+}
+
+.about-area .spec dl:nth-child(2) {
+    margin-top: 40px;
+}
+
+.about-area .spec dl:nth-child(2) dd {
+    margin-top: 20px;
+} 
+
+.about-area .spec dl dt {
+    font-weight: 700;
+    text-align: center;
+    font-size: 16pt;
+    margin-bottom: 10px;
+}
+
+.about-area .spec dl dd {
+    line-height: 18px;
 }
 
 /* skills-area */
@@ -404,7 +446,7 @@ body, html {
 .skills-area .license dt::after {
     content: "";
     clear: both;
-    width: 65px;
+    width: 30%;
     height: 1px;
     position: absolute;
     display: block;
@@ -423,7 +465,6 @@ body, html {
 
 .skills-area .coding,
 .skills-area .design {
-    background: orange;
     width: 100%;
     height: 48%;
     margin-bottom: 15px;
@@ -432,25 +473,50 @@ body, html {
 
 .skills-area .coding,
 .skills-area .design {
-    text-align: center;
-    padding: 20px 20px;
+    padding: 30px 30px;
     background-color: #fff;
     border-radius: 30px;
 }
 
-.skills-area .coding {
-    display: flex;
-    justify-content: space-between;
-}
-
-.skills-area .coding dl {
-    width: 30%;
-    display: block;
-}
-
+.skills-area .coding dl,
 .skills-area .design dl {
-    width: 50%;
+    width: 100%;
+    height: 30%;
     display: block;
+    margin: 7px auto;
+    position: relative;
+}
+
+.skills-area .coding dl dd,
+.skills-area .design dl dd {
+    display: inline-block;
+}
+
+.skills-area .coding dl .under,
+.skills-area .design dl .under {
+    height: 5px;
+    width: 0px;
+    background: orange;
+    position: absolute;
+    bottom: 25px;
+    left: 103px;
+    transition: 3s;
+}
+
+.skills-area .coding dl .html-bar.on {
+    width: 250px;
+}
+
+.skills-area .coding dl .css-bar.on {
+    width: 210px;
+}
+
+.skills-area .coding dl .js-bar.on {
+    width: 263px;
+}
+
+.skills-area .design dl .ps-bar.on {
+    width: 280px;
 }
 
 .skills-area .coding dl dt,
@@ -458,7 +524,11 @@ body, html {
     font-size: 16pt;
     font-weight: 600;
     margin-bottom: 10px;
+    width: 100px;
+    display: inline-block;
 }
+
+
 
 /* portfolio-area */
 
@@ -497,15 +567,16 @@ body, html {
 
 .portfolio-area ul li:nth-child(1) {
     background: url(baskin.jpg) no-repeat;
+    background-size: 100%;
+    background-position: center 0;
 
-    background-size: 80%;
-    background-position: center;}
+}
 
 .portfolio-area ul li:nth-child(2) {
     background: url(ashley.jpg) no-repeat;
-
-    background-size: 80%;
-    background-position: center;}
+    background-size: 100%;
+    background-position: center 0;
+}
 
 .portfolio-area ul li a {
     background: rgba(255,198,99,0.7);
