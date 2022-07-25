@@ -44,7 +44,7 @@ window.addEventListener("scroll", function() {
     if(scrollHeight >= vh2min+850) {
         container[4].classList.add("on");
 
-        for(let u = 0; u <= underBar.length-1; u++) {
+        for(let u = 0; u <= underBar.length; u++) {
         underBar[u].classList.add("on");
     }
 
